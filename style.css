@@ -1,3 +1,5 @@
+/* General styling */
+
 * {
 
     box-sizing: border-box;
@@ -7,7 +9,7 @@
 body {
 
     margin: 0px;
-    background-color: orange;
+    background-color: white;
     min-height: 100vh;
 
     display: flex;
@@ -15,7 +17,16 @@ body {
 
 }
 
-.placeholder {
+a {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+/* Calculator container and calculator */
+
+.calcContainer {
 
     color: white;
     flex: 1;
@@ -26,10 +37,85 @@ body {
 
 }
 
+.calculator {
+
+    border: black 3px solid;
+    border-radius: 20px;
+    background-color: darkgrey;
+
+    width: 360px;
+    height: 440px;
+
+    display: flex;
+    flex-direction: column;    
+
+}
+
+.screen {
+
+    border: black 1px solid;
+    background-color: rgb(231, 240, 231);
+
+    width: 80%;
+    height: 20%;    
+
+    margin-top: 40px;
+    margin-bottom: 30px;        
+
+    align-self: center;
+    display: flex;
+    justify-content:flex-end;
+
+}
+
+.screenContent {
+    
+    align-self:flex-end;
+    color: black;
+    font-size: 30px;
+    font-weight: light;
+    padding-right: 15px;
+    padding-bottom: 15px;
+
+}
+
+/* Button section and buttons */
+
+.buttonSection {
+
+    /* background-color: blueviolet; */
+
+    width: 340px;
+    height: 250px;    
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content:flex-end;    
+    flex-wrap: wrap;
+    row-gap: 20px;
+    gap: 15px;
+
+}
+
+button {
+
+    font-size: 15px;
+    padding:5px;
+
+    border-radius: 50%;
+
+    height: fit-content;
+    width: 20%;
+    height: 20%;
+}
+
+/* Header and Footer */
+
 header {
 
-    color: white;
-    background-color: grey;
+    
+    background-color: white;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -42,8 +128,8 @@ header {
 
 footer {
 
-    color: white;
-    background-color: grey;
+    
+    background-color: white;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -52,77 +138,4 @@ footer {
     font-size: 20px;
     font-weight: bold;
 
-}
-
-a {
-
-    text-decoration: none;
-    color: white;
-
-}
-
-.calcContainer {
-
-    border: black 5px solid;
-    border-radius: 20px;
-    background-color: aqua;
-
-    min-width: 25vw;
-    min-height: 60vh;
-
-    display: flex;
-    flex-direction: column;
-
-}
-
-.screen {
-
-    border: black 1px solid;
-    background-color: antiquewhite;
-
-    width: 17.5vw;
-    height: 10vh;    
-
-    margin: 10px 0px;
-    padding: 10px;    
-
-    align-self: center;
-    display: flex;
-    justify-content:center;
-
-}
-
-.screenContent {
-    
-    align-self:center;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-
-}
-
-.buttonSection {
-
-    /* background-color: blueviolet; */
-
-    width: 22.5vw;
-    height: 40vh;
-
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    align-content: center;    
-    flex-wrap: wrap;
-    row-gap: 20px;
-    gap: 5px;
-
-}
-
-button {
-
-    font-size: 15px;
-    padding:5px;
-
-    height: fit-content;
-    width: 20%;
 }
