@@ -1,10 +1,10 @@
 # Calculator
 
-A web based calculator. This calculator will have implementations of
-the basic operations of addition, subtraction, multiplication and division.
+A web based calculator. This calculator will carry out the basic operations
+of addition, subtraction, multiplication and division.
 
-Functionality of these operands will extend to be carried out on two individual
-numbers.
+The calculator will carry out said operations on two numbers at a time. Due to
+this the calculator at present will not support BODMAS.
 
-Both operands and functionality will be improved upon on after first 
+Both operands and functionality will be extended upon after first 
 implementations.
