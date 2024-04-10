@@ -227,11 +227,40 @@ function numberPress(pressed) {
             operationContent.textContent += 9;
             break;
 
+        case '.':
+            if (screenDisplay.textContent.includes('.')) {
+                break;
+            }
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
+            if (memory.blank) {
+                screenDisplay.textContent = '';
+                memory.blank = false;
+            };
+            screenDisplay.textContent += '.';
+            operationContent.textContent += '.';
+            break;
+
         case 'AC':
             screenDisplay.textContent = '';
             operationContent.textContent = '';
             memory = {};
             break;
+
+        case 'DEL':
+            let delVar = operationContent.textContent.substring(operationContent.textContent.length-1, operationContent.textContent.length);
+
+            if (delVar === '/' || delVar === '*' || delVar === '+' || delVar === '-' || memory.equalsPressed) {
+                
+                break;
+            } else {
+                screenDisplay.textContent = screenDisplay.textContent.substring(0, screenDisplay.textContent.length-1);
+                operationContent.textContent = operationContent.textContent.substring(0, screenDisplay.textContent.length-1);            
+                break;
+            }
 
         case '/':
             if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {

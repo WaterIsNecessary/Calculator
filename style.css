@@ -44,7 +44,8 @@ a {
     background-color: #353943;
 
     width: 360px;
-    height: 440px;
+    /* height: 440px; */
+    height: 500px;
 
     display: flex;
     flex-direction: column;    
@@ -57,10 +58,10 @@ a {
     background-color: rgb(231, 240, 231);
 
     width: 94%;
-    height: 20%;    
+    height: 22%;    
 
     margin-top: 40px;
-    margin-bottom: 30px;        
+    margin-bottom: 20px;        
 
     align-self: center;
     display: flex;
@@ -88,13 +89,29 @@ a {
     color: black;
     font-size: 30px;
     font-weight: light;
-    padding-left: 1px;
+    padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
 
 }
 
 /* Button section and buttons */
+
+.widerButtonSection {
+
+    width: 340px;
+    height: 62px;    
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    /* align-content:flex-end;    
+    flex-wrap: wrap;
+    row-gap: 20px; */
+    gap: 3px;
+
+}
+
 
 .buttonSection {
 
@@ -125,6 +142,20 @@ button {
     height: 24%;
 }
 
+.widerButton {
+
+    font-size: 35px;
+    padding:5px;
+
+    border-radius: 10%;
+
+    height: fit-content;
+    width: 49%;
+    height: 60px;
+    
+
+}
+
 .num {
 
     background-color: #9accca;
@@ -133,6 +164,11 @@ button {
 .clear {
 
     background-color: #f58981;
+}
+
+.delete {
+
+    background-color: #819cf5;
 }
 
 .oper {
