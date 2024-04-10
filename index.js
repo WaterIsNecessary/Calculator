@@ -1,5 +1,7 @@
 let memory = {};
 
+const errorMessage = 'Too many digits. Press AC.';
+
 const screenDisplay = document.querySelector('.screenContent');
 
 const operationContent = document.querySelector('.operationContent');
@@ -81,11 +83,16 @@ function division(object) {
 
 };
 
-function numberPress(pressed) {
+function numberPress(pressed) {    
 
-    switch (pressed) {
+    switch (pressed) {        
 
         case '0':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -95,6 +102,11 @@ function numberPress(pressed) {
             break;
 
         case '1':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -104,6 +116,11 @@ function numberPress(pressed) {
             break;
 
         case '2':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -113,6 +130,11 @@ function numberPress(pressed) {
             break;
 
         case '3':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -122,6 +144,11 @@ function numberPress(pressed) {
             break;
 
         case '4':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -131,6 +158,11 @@ function numberPress(pressed) {
             break;
 
         case '5':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -140,6 +172,11 @@ function numberPress(pressed) {
             break;
 
         case '6':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -149,6 +186,11 @@ function numberPress(pressed) {
             break;
 
         case '7':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -158,6 +200,11 @@ function numberPress(pressed) {
             break;
 
         case '8':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -167,6 +214,11 @@ function numberPress(pressed) {
             break;
 
         case '9':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
@@ -182,6 +234,11 @@ function numberPress(pressed) {
             break;
 
         case '/':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
                 operationContent.textContent = text + '/';
@@ -205,6 +262,11 @@ function numberPress(pressed) {
             break;
 
         case '*':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
                 operationContent.textContent = text + '*';
@@ -228,6 +290,11 @@ function numberPress(pressed) {
             break;            
 
         case '-':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
                 operationContent.textContent = text + '-';
@@ -251,6 +318,11 @@ function numberPress(pressed) {
             break;
 
         case '+':
+            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+                screenDisplay.textContent = errorMessage;
+                operationContent.textContent = '';
+                break;
+            }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
                 operationContent.textContent = text + '+';
