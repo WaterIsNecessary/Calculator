@@ -254,19 +254,19 @@ function numberPress(pressed) {
             let delVar = operationContent.textContent.substring(operationContent.textContent.length-1, operationContent.textContent.length);
 
             if (delVar === '/' || delVar === '*' || delVar === '+' || delVar === '-' || memory.equalsPressed) {
+                memory.blank = true;
                 
-                break;
             } else {
                 screenDisplay.textContent = screenDisplay.textContent.substring(0, screenDisplay.textContent.length-1);
-                operationContent.textContent = operationContent.textContent.substring(0, screenDisplay.textContent.length-1);            
-                break;
+                operationContent.textContent = operationContent.textContent.substring(0, operationContent.textContent.length-1);            
+                
             }
+            break;
 
         case '/':
             if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
                 screenDisplay.textContent = errorMessage;
-                operationContent.textContent = '';
-                break;
+                operationContent.textContent = '';                
             }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
@@ -294,7 +294,6 @@ function numberPress(pressed) {
             if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
                 screenDisplay.textContent = errorMessage;
                 operationContent.textContent = '';
-                break;
             }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
@@ -321,8 +320,7 @@ function numberPress(pressed) {
         case '-':
             if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
                 screenDisplay.textContent = errorMessage;
-                operationContent.textContent = '';
-                break;
+                operationContent.textContent = '';                
             }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
@@ -349,8 +347,7 @@ function numberPress(pressed) {
         case '+':
             if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
                 screenDisplay.textContent = errorMessage;
-                operationContent.textContent = '';
-                break;
+                operationContent.textContent = '';                
             }
             if (memory.blank && !(memory.equalsPressed)) {
                 let text = operationContent.textContent.substring(0,operationContent.textContent.length-1);
