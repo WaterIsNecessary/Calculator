@@ -1,7 +1,5 @@
 let memory = {};
 
-const errorMessage = 'Too many digits. Press AC.';
-
 const screenDisplay = document.querySelector('.currentNumber');
 
 const history = document.querySelector('.history');
@@ -54,7 +52,7 @@ function addition(object) {
 
     object.answer = Number(object.storageNum) + Number(object.storageNum2);
 
-    return object;
+    /* return object; */
 
 };
 
@@ -63,7 +61,7 @@ function subtraction(object) {
     /* - Number(screenDisplay.textContent) */
     object.answer = Number(object.storageNum) - Number(object.storageNum2);
 
-    return object;
+    /* return object; */
 
 };
 
@@ -71,7 +69,7 @@ function multiplication(object) {
 
     object.answer = Number(object.storageNum) * Number(object.storageNum2);
 
-    return object;
+    /* return object; */
 
 };
 
@@ -90,7 +88,7 @@ function division(object) {
 
     /* } */
 
-    return object;
+    /* return object; */
 
 };
 
@@ -101,146 +99,166 @@ function numberPress(pressed) {
     if (displayText === 'Undefined') {
         screenDisplay.textContent = '';
         displayText = '';
-    }
+    }    
 
     switch (pressed) {        
 
         case '0':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 0;
             history.textContent += 0;
             break;
 
         case '1':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }            
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 1;
             history.textContent += 1;
             break;
 
         case '2':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 2;
             history.textContent += 2;
             break;
 
         case '3':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 3;
             history.textContent += 3;
             break;
 
         case '4':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 4;
             history.textContent += 4;
             break;
 
         case '5':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 5;
             history.textContent += 5;
             break;
 
         case '6':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 6;
             history.textContent += 6;
             break;
 
         case '7':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 7;
             history.textContent += 7;
             break;
 
         case '8':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 8;
             history.textContent += 8;
             break;
 
         case '9':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += 9;
             history.textContent += 9;
             break;
@@ -249,15 +267,17 @@ function numberPress(pressed) {
             if (screenDisplay.textContent.includes('.')) {
                 break;
             }
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
-                /* screenDisplay.textContent = errorMessage;
-                history.textContent = ''; */
+            if (screenDisplay.textContent.length === 21) {
+                
                 break;
             }
             if (memory.blank) {
                 screenDisplay.textContent = '';
                 memory.blank = false;
-            };
+            }
+            if (memory.equalsPressed) {
+                history.textContent = '';
+            }
             screenDisplay.textContent += '.';
             history.textContent += '.';
             break;
@@ -292,7 +312,7 @@ function numberPress(pressed) {
             break;
 
         case '/':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+            if (screenDisplay.textContent.length === 21) {
                          
             
             } else if (memory.blank && !(memory.equalsPressed)) {
@@ -324,7 +344,7 @@ function numberPress(pressed) {
             break;
 
         case '*':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+            if (screenDisplay.textContent.length === 21) {
                 
 
             } else if (memory.blank && !(memory.equalsPressed)) {
@@ -332,7 +352,7 @@ function numberPress(pressed) {
                 history.textContent = text + '*';
                 memory.operation = '*';
 
-            } else if (memory.operation && displayText != '0') {   
+            } else if (memory.operation/*  && displayText != '0' */) {   
                 memory.storageNum2 = screenDisplay.textContent;
                 operate(memory);
                 screenDisplay.textContent = memory.answer;
@@ -340,11 +360,11 @@ function numberPress(pressed) {
                 memory.storageNum = memory.answer;
                 memory.operation = '*';
                 memory.blank = true;
-            } else if (memory.operation && displayText === '0') {
+            } /* else if (memory.operation && displayText === '0') {
                 screenDisplay.textContent = 'Undefined';
                 history.textContent = '';
                 memory = {}; 
-            } else if (!(memory.operation)) {            
+            } */ else if (!(memory.operation)) {            
                 memory.equalsPressed = false;
                 history.textContent += '*';
                 memory.blank = true;
@@ -354,7 +374,7 @@ function numberPress(pressed) {
             break;            
 
         case '-':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+            if (screenDisplay.textContent.length === 21) {
                              
             
             } else if (memory.blank && !(memory.equalsPressed)) {
@@ -362,7 +382,7 @@ function numberPress(pressed) {
                 history.textContent = text + '-';
                 memory.operation = '-';
 
-            } else if (memory.operation && displayText != '0') {   
+            } else if (memory.operation/*  && displayText != '0' */) {   
                 memory.storageNum2 = screenDisplay.textContent;
                 operate(memory);
                 screenDisplay.textContent = memory.answer;
@@ -370,11 +390,11 @@ function numberPress(pressed) {
                 memory.storageNum = memory.answer;
                 memory.operation = '-';
                 memory.blank = true;
-            } else if (memory.operation && displayText === '0') {
+            } /* else if (memory.operation && displayText === '0') {
                 screenDisplay.textContent = 'Undefined';
                 history.textContent = '';
                 memory = {};
-            } else if (!(memory.operation)) {            
+            } */ else if (!(memory.operation)) {            
                 memory.equalsPressed = false;
                 history.textContent += '-';
                 memory.blank = true;
@@ -384,7 +404,7 @@ function numberPress(pressed) {
             break;
 
         case '+':
-            if (screenDisplay.textContent.length === 21 || screenDisplay.textContent === errorMessage) {
+            if (screenDisplay.textContent.length === 21) {
                              
             
             } else if (memory.blank && !(memory.equalsPressed)) {
@@ -392,7 +412,7 @@ function numberPress(pressed) {
                 history.textContent = text + '+';
                 memory.operation = '+';
 
-            } else if (memory.operation && displayText != '0') {   
+            } else if (memory.operation/*  && displayText != '0' */) {   
                 memory.storageNum2 = screenDisplay.textContent;
                 operate(memory);
                 screenDisplay.textContent = memory.answer;
@@ -400,11 +420,11 @@ function numberPress(pressed) {
                 memory.storageNum = memory.answer;
                 memory.operation = '+';
                 memory.blank = true;
-            } else if (memory.operation && displayText === '0') {
+            } /* else if (memory.operation && displayText === '0') {
                 screenDisplay.textContent = 'Undefined';
                 history.textContent = '';
                 memory = {};                
-            } else if (!(memory.operation)) {
+            } */ else if (!(memory.operation)) {
                 memory.equalsPressed = false;
                 history.textContent += '+';
                 memory.blank = true;
@@ -414,9 +434,12 @@ function numberPress(pressed) {
             break;
 
         case '=':
+
+            let regVar2 = history.textContent.substring(history.textContent.length-2, history.textContent.length);
+
             if (memory.blank || !(memory.storageNum)) {
 
-            } else if (memory.operation && displayText === '0') {
+            } else if (memory.operation && regVar2 === '/0') {
                 screenDisplay.textContent = 'Undefined';
                 history.textContent = '';
                 memory = {};
