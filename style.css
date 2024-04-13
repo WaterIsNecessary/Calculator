@@ -1,4 +1,4 @@
-/* General styling */
+/* All and body styling */
 
 * {
 
@@ -17,14 +17,6 @@ body {
 
 }
 
-a {
-
-    text-decoration: none;
-    color: black;
-    text-align: center;
-
-}
-
 /* Calculator container and calculator */
 
 .calcContainer {
@@ -40,18 +32,20 @@ a {
 
 .calculator {
 
+    background-color: #353943;
+    padding-bottom: 10px;
     border: black 3px solid;
     border-radius: 20px;
-    background-color: #353943;
 
-    width: 360px;    
-    /* height: 500px; */
-
+    width: 360px;
+    
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;          
-
 }
+
+/* Calculator screen and both calculator columns. Top column displaying first, 
+digits keyed in and operations carried out. The bottom column displaying the
+current number being keyed in*/
 
 .screen {
 
@@ -60,10 +54,7 @@ a {
     border-radius: 10px;
 
     /* width: 94%; */    
-    /* height: 22%; */
-    width: 332.75px;
-    /* min-height:108.67px; */
-        
+    width: 332.75px;   
 
     margin-top: 20px;
     margin-bottom: 20px;        
@@ -71,79 +62,62 @@ a {
     display: flex;        
     justify-content:flex-end;
     flex-direction: column;
-
     align-self: center;
-    /* flex:1; */
-
-    
-
 }
 
-.operationContent {
+.history {    
     
-    align-self:flex-end;
     color: black;
     font-size: 20px;
     font-weight: bold;
+
     padding-top: 10px;
     padding-right: 15px;
-    padding-bottom: 5px;
-    
+    padding-bottom: 5px;    
     
     width:332px;
     min-height: 57px;
 
+    align-self:flex-end;
+
     text-align: end;
-    overflow-wrap: break-word;  
-    
-    /* background-color: green; */
-    
+    overflow-wrap: break-word;    
 }
 
-.screenContent {
-
+.currentNumber {  
     
     
-    align-self:flex-end;
     color: black;
     font-size: 30px;
     font-weight: light;
     
     padding-right: 15px;
     padding-bottom: 15px;
+
     width: 332px;
     min-height: 49px;
 
+    align-self:flex-end;
+
     text-align: end;
     overflow-wrap: break-word;
-    
-    /* background-color: orange; */
-
 }
 
-/* Button section and buttons */
+/* Top and bottom button sections and buttons */
 
-.widerButtonSection {
+.topButtonSection {
 
     width: 340px;
     height: 62px;    
 
     display: flex;
     justify-content: center;
-    align-self: center;
-    /* align-content:flex-end;    
-    flex-wrap: wrap;
-    row-gap: 20px; */
+    align-self: center;    
     gap: 3px;
-
-    
-
 }
 
 
-.buttonSection {
-
-    /* background-color: blueviolet; */
+.bottomButtonSection {   
 
     width: 340px;
     height: 250px;    
@@ -155,19 +129,14 @@ a {
     flex-wrap: wrap;
     row-gap: 20px;
     gap: 3px;
-
-    
-
 }
 
 button {
 
     font-size: 35px;
     padding:5px;
-
     border-radius: 10%;
-
-    height: fit-content;
+    
     width: 24%;
     height: 24%;
 }
@@ -176,15 +145,13 @@ button {
 
     font-size: 35px;
     padding:5px;
-
     border-radius: 10%;
-
-    height: fit-content;
+    
     width: 49%;
     height: 60px;
-    
-
 }
+
+/* Color styling of various buttons */
 
 .num {
 
@@ -206,37 +173,43 @@ button {
     background-color: #fcb85e;
 }
 
-/* Header and Footer */
+/* Header */
 
 header {
 
-    
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     font-size: 40px;
     font-weight: bolder;
-
-}
-
-footer {
-
-    
     background-color: white;
     padding: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 20px;
-    font-weight: bold;
-
 }
 
 .title {
 
     text-align: center;
+}
+
+/* Footer */
+
+footer {
+
+    font-size: 20px;
+    font-weight: bold;    
+    background-color: white;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+
+    text-decoration: none;
+    color: black;
+    text-align: center;
+
 }
