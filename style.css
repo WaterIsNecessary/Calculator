@@ -21,6 +21,7 @@ a {
 
     text-decoration: none;
     color: black;
+    text-align: center;
 
 }
 
@@ -28,7 +29,7 @@ a {
 
 .calcContainer {
 
-    color: white;
+    background-color: white;
     flex: 1;
 
     display: flex;
@@ -43,12 +44,12 @@ a {
     border-radius: 20px;
     background-color: #353943;
 
-    width: 360px;
-    /* height: 440px; */
-    height: 500px;
+    width: 360px;    
+    /* height: 500px; */
 
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    padding-bottom: 10px;          
 
 }
 
@@ -56,19 +57,25 @@ a {
 
     border: black 1px solid;
     background-color: rgb(231, 240, 231);
+    border-radius: 10px;
 
-    width: 94%;
-    height: 22%;    
+    /* width: 94%; */    
+    /* height: 22%; */
+    width: 332.75px;
+    /* min-height:108.67px; */
+        
 
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;        
 
-    align-self: center;
-    display: flex;
+    display: flex;        
     justify-content:flex-end;
     flex-direction: column;
 
-    border-radius: 10px;
+    align-self: center;
+    /* flex:1; */
+
+    
 
 }
 
@@ -78,20 +85,39 @@ a {
     color: black;
     font-size: 20px;
     font-weight: bold;
+    padding-top: 10px;
     padding-right: 15px;
     padding-bottom: 5px;
+    
+    
+    width:332px;
+    min-height: 57px;
 
+    text-align: end;
+    overflow-wrap: break-word;  
+    
+    /* background-color: green; */
+    
 }
 
 .screenContent {
+
+    
     
     align-self:flex-end;
     color: black;
     font-size: 30px;
     font-weight: light;
-    padding-left: 15px;
+    
     padding-right: 15px;
     padding-bottom: 15px;
+    width: 332px;
+    min-height: 49px;
+
+    text-align: end;
+    overflow-wrap: break-word;
+    
+    /* background-color: orange; */
 
 }
 
@@ -110,6 +136,8 @@ a {
     row-gap: 20px; */
     gap: 3px;
 
+    
+
 }
 
 
@@ -127,6 +155,8 @@ a {
     flex-wrap: wrap;
     row-gap: 20px;
     gap: 3px;
+
+    
 
 }
 
@@ -204,4 +234,9 @@ footer {
     font-size: 20px;
     font-weight: bold;
 
+}
+
+.title {
+
+    text-align: center;
 }
