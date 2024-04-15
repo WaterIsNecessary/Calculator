@@ -265,38 +265,26 @@ function wideButtonPressed(pressed) {
 
 function operationPressed(pressed) {
 
-    let historyTextLength = history.textContent.length;
     let historyText = history.textContent;
 
     let currentNumLength = currentNum.textContent.length;    
-    let currentNumText = currentNum.textContent;
-    
-    let text = historyText.substring(0,historyTextLength-1);
+    let currentNumText = currentNum.textContent;    
 
     // Execute this if the current number is 21 digits to stop user inputting
     // needlessly huge numbers or if no number has been typed in no operation
     // is allowed to be pressed or lastly if the divided by zero error message
-    // is displayed the user cannot press an operator. 
+    // is displayed the user cannot press an operator 
 
     if (currentNumLength === currentNumMaxLimit || currentNumLength === 0 || currentNumText === divByZeroMessage) {
                     
-
-    // If the minus operation is pressed once and only once allow it to be 
-    // displayed both in the history and current number displays as to allow      
-    // calculations with negative numbers
-
-        if (pressed === '-' && historyText.substring(0,1) != '-') {            
-            history.textContent += pressed;
-            currentNum.textContent += pressed;
-        }
-
+    
     }    
 
     // Execute this to swap out an operation that you have already clicked on 
     // with another operation
     
     else if (memory.currentNumReset && !(memory.equalsPressed)) {
-        
+        let text = historyText.substring(0,history.textContent.length-1);
         history.textContent = text + pressed;
         memory.operation = pressed;
 
