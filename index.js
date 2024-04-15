@@ -265,10 +265,13 @@ function wideButtonPressed(pressed) {
 
 function operationPressed(pressed) {
 
+    let historyTextLength = history.textContent.length;
     let historyText = history.textContent;
 
     let currentNumLength = currentNum.textContent.length;    
-    let currentNumText = currentNum.textContent;    
+    let currentNumText = currentNum.textContent;
+    
+    let text = historyText.substring(0,historyTextLength-1);
 
     // Execute this if the current number is 21 digits to stop user inputting
     // needlessly huge numbers or if no number has been typed in no operation
@@ -284,10 +287,9 @@ function operationPressed(pressed) {
     // with another operation
     
     else if (memory.currentNumReset && !(memory.equalsPressed)) {
-        let text = historyText.substring(0,history.textContent.length-1);
+
         history.textContent = text + pressed;
         memory.operation = pressed;
-
     } 
     
     // Execute this if operations are pressed consecutively after each other 
