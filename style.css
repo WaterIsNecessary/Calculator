@@ -168,7 +168,7 @@ button {
     background-color: #819cf5;
 }
 
-.oper {
+.oper, .equals {
 
     background-color: #fcb85e;
 }
