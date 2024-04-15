@@ -8,3 +8,11 @@ this the calculator at present will not support BODMAS.
 
 Both operands and functionality will be extended upon after first 
 implementations.
+
+## To do list:
+
+- Implement a negative/positive button such that current inputted numbers can be
+toggled to be positive or negative. This allows the input of negative numbers
+for calculations by the calculator.
+
+- Implement keyboard support.
